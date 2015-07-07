@@ -1105,8 +1105,8 @@ vec_range : simple_expr updown simple_expr {
           }
           ;
 
-updown : DOWNTO {$$=-1}
-       | TO {$$=1}
+updown : DOWNTO {$$=-1;}
+       | TO {$$=1;}
        ;
 
 /* Architecture */
@@ -1653,7 +1653,7 @@ with_item : expr delay WHEN wlist {
               $$=addtxt(sl,";\n");
             }
 
-p_decl : rem {$$=$1}
+p_decl : rem {$$=$1;}
        | rem VARIABLE s_list ':' type ';' p_decl {
          slist *sl;
          sglist *sg, *p;
