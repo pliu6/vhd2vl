@@ -1130,12 +1130,7 @@ a_decl    : {$$=NULL;}
           | a_decl SIGNAL s_list ':' type ';' rem {
             sglist *sg;
             slist *sl;
-            int size;
 
-              if($5->vtype==tSUBSCRIPT)
-                size=1;
-              else
-                size=-1;
               sl=$1;
               sg=$3;
               for(;;){
@@ -1158,12 +1153,7 @@ a_decl    : {$$=NULL;}
           | a_decl SIGNAL s_list ':' type ':' '=' expr ';' rem {
             sglist *sg;
             slist *sl;
-            int size;
 
-              if($5->vtype==tSUBSCRIPT)
-                size=1;
-              else
-                size=-1;
               sl=$1;
               sg=$3;
               for(;;){
