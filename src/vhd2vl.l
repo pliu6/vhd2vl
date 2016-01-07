@@ -141,7 +141,7 @@ void getbasedstring(unsigned skip);
   return NAME;
 }
 
-[0-9]+ {
+[0-9]+[0-9_]* {
   sscanf(yytext, "%d", &yylval.n);
   return NATURAL;
 }
